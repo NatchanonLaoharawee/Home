@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { BlogPost } from "@/entities/BlogPost";
+import BlogPost from "@/Entities/BlogPost.json";
 import { Link } from "react-router-dom";
 import { createPageUrl } from "@/utils";
 import { Clock, Calendar, Tag } from "lucide-react";

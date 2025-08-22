@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Project } from "@/entities/Project";
+import Project from "@/entities/Project";
 import { Link } from "react-router-dom";
 import { createPageUrl } from "@/utils";
 import { ExternalLink, Github, Calendar, Filter } from "lucide-react";
