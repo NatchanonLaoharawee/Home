@@ -1,3 +1,4 @@
 export function createPageUrl(pageName) {
-  return `/${pageName.toLowerCase()}`;
+  const base = import.meta.env.BASE_URL || '/';
+  return `${base}${pageName.toLowerCase()}`;
 }

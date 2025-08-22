@@ -5,18 +5,19 @@ import Contact from "./Pages/Contact.jsx";
 import Projects from "./Pages/Projects.jsx";
 import About from "./Pages/About.jsx";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { createPageUrl } from "./utils.js";
 
 function App() {
   return (
     <BrowserRouter>
       <Layout>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/home" element={<Home />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/about" element={<About />} />
+          <Route path={createPageUrl("/")} element={<Home />} />
+          <Route path={createPageUrl("home")} element={<Home />} />
+          <Route path={createPageUrl("blog")} element={<Blog />} />
+          <Route path={createPageUrl("projects")} element={<Projects />} />
+          <Route path={createPageUrl("contact")} element={<Contact />} />
+          <Route path={createPageUrl("about")} element={<About />} />
           <Route path="*" element={<div>Something went wrong!</div>} />
         </Routes>
       </Layout>
